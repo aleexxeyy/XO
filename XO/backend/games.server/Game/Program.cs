@@ -1,7 +1,16 @@
 using Game.Services;
+using GameHub.DataBaseContext;
+using GameHub.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Регистрация GameHubDbContext
+builder.Services.AddDbContext<GameHubDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Регистрация сервисов и репозиториев
+builder.Services.AddScoped<IGameHubRepository, GameHubRepository>();
 builder.Services.AddScoped<IXOService, XOService>();
 
 builder.Services.AddControllers();
