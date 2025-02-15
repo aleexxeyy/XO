@@ -7,7 +7,7 @@ namespace Game.Models
     {
         public Guid Id { get; init; }
         [JsonConverter(typeof(StringArrayJsonConverter))]
-        public string[,] Board { get; init; } = new string[3, 3];
+        public string[,] Board { get; set; } = new string[3, 3];
         public string? PlayerX { get; set; }
         public string? PlayerO { get; set; }
         public string? CurrentPlayer { get; set; }

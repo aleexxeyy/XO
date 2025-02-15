@@ -1,4 +1,5 @@
 ﻿using Game.Models;
+using GameHub.Models;
 using GameHub.Repositories;
 
 namespace Game.Services
@@ -70,12 +71,25 @@ namespace Game.Services
                 throw new InvalidOperationException($"GameHub with ID {game.Id} not found.");
             }
 
-            gameHub.PlayerX = game.PlayerX;
-            gameHub.PlayerO = game.PlayerO;
+            game.PlayerX = gameHub.PlayerX;
+            game.PlayerO = gameHub.PlayerO;
             gameHub.Status = game.IsGameOver ? "finished" : "in progress";
 
             await _hubRepository.UpdateHub(gameHub);
         }
 
+        public XO CreateGame(GameHubs hub)
+        {
+            var game = new XO
+            {
+                Id = hub.Id,
+                Board = new string[3,3],
+                CurrentPlayer = hub.PlayerX,
+                PlayerX = hub.PlayerX,
+                PlayerO = hub.PlayerO,
+            };
+
+            return game;
+        }
     }
 }
