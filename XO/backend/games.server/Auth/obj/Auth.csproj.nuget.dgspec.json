@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Works\\Learn3\\Games\\backend\\games.server\\Auth\\Auth.csproj": {}
+    "D:\\Works\\Learn3\\Project\\XO\\backend\\games.server\\Auth\\Auth.csproj": {}
   },
   "projects": {
-    "D:\\Works\\Learn3\\Games\\backend\\games.server\\Auth\\Auth.csproj": {
+    "D:\\Works\\Learn3\\Project\\XO\\backend\\games.server\\Auth\\Auth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Works\\Learn3\\Games\\backend\\games.server\\Auth\\Auth.csproj",
+        "projectUniqueName": "D:\\Works\\Learn3\\Project\\XO\\backend\\games.server\\Auth\\Auth.csproj",
         "projectName": "Auth",
-        "projectPath": "D:\\Works\\Learn3\\Games\\backend\\games.server\\Auth\\Auth.csproj",
+        "projectPath": "D:\\Works\\Learn3\\Project\\XO\\backend\\games.server\\Auth\\Auth.csproj",
         "packagesPath": "C:\\Users\\Cron\\.nuget\\packages\\",
-        "outputPath": "D:\\Works\\Learn3\\Games\\backend\\games.server\\Auth\\obj\\",
+        "outputPath": "D:\\Works\\Learn3\\Project\\XO\\backend\\games.server\\Auth\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

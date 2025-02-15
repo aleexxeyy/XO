@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth", "Auth\Auth.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameHub", "GameHub\GameHub.csproj", "{D4B2C9D2-E29E-4328-921A-3B4D6F6F79B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Game\Game.csproj", "{15F00812-4DB8-416A-BCEA-43A04CEE78D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D4B2C9D2-E29E-4328-921A-3B4D6F6F79B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4B2C9D2-E29E-4328-921A-3B4D6F6F79B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4B2C9D2-E29E-4328-921A-3B4D6F6F79B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15F00812-4DB8-416A-BCEA-43A04CEE78D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F00812-4DB8-416A-BCEA-43A04CEE78D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F00812-4DB8-416A-BCEA-43A04CEE78D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15F00812-4DB8-416A-BCEA-43A04CEE78D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
