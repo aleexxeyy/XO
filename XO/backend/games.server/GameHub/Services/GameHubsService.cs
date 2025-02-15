@@ -23,6 +23,7 @@ namespace GameHub.Services
             {
                 Id = Guid.NewGuid(),
                 Creator = creator,
+                PlayerX = creator,
                 CreatedAt = DateTime.UtcNow,
                 Status = "second player expected"
             };

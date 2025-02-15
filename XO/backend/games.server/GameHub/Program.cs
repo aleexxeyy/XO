@@ -41,7 +41,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseRouting();
 app.UseCors();
-app.UseWebSockets();
 
 app.UseEndpoints(endpoints =>
 {

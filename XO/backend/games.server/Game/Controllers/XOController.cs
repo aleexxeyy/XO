@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Game.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Game.Controllers
 {
@@ -6,5 +7,11 @@ namespace Game.Controllers
     [Route("api/[controller]")]
     public class XOController
     {
+        private readonly IXOService _xoService;
+
+        public XOController(IXOService xoService)
+        {
+            _xoService = xoService; 
+        }
     }
 }
