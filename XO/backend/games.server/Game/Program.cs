@@ -1,19 +1,29 @@
 using Game.Services;
 using GameHub.DataBaseContext;
+using GameHub.Hubs;
 using GameHub.Repositories;
+using GameHub.Services;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Регистрация GameHubDbContext
 builder.Services.AddDbContext<GameHubDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Регистрация сервисов и репозиториев
 builder.Services.AddScoped<IGameHubRepository, GameHubRepository>();
+builder.Services.AddScoped<IGameHubsService>(provider =>
+{
+    var repository = provider.GetRequiredService<IGameHubRepository>();
+    return new GameHubsService(repository);
+});
+
+
 builder.Services.AddScoped<IXOService, XOService>();
 
 builder.Services.AddControllers();
+builder.Services.AddSignalR();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

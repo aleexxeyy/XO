@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "D:\\Works\\Learn3\\Project\\XO\\backend\\games.server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D4B2C9D2-E29E-4328-921A-3B4D6F6F79B2}|GameHub\\GameHub.csproj|d:\\works\\learn3\\project\\xo\\backend\\games.server\\gamehub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4B2C9D2-E29E-4328-921A-3B4D6F6F79B2}|GameHub\\GameHub.csproj|solutionrelative:gamehub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{15F00812-4DB8-416A-BCEA-43A04CEE78D7}|Game\\Game.csproj|d:\\works\\learn3\\project\\xo\\backend\\games.server\\game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15F00812-4DB8-416A-BCEA-43A04CEE78D7}|Game\\Game.csproj|solutionrelative:game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4B2C9D2-E29E-4328-921A-3B4D6F6F79B2}|GameHub\\GameHub.csproj|d:\\works\\learn3\\project\\xo\\backend\\games.server\\gamehub\\services\\gamehubsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4B2C9D2-E29E-4328-921A-3B4D6F6F79B2}|GameHub\\GameHub.csproj|solutionrelative:gamehub\\services\\gamehubsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4B2C9D2-E29E-4328-921A-3B4D6F6F79B2}|GameHub\\GameHub.csproj|d:\\works\\learn3\\project\\xo\\backend\\games.server\\gamehub\\repositories\\gamehubrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4B2C9D2-E29E-4328-921A-3B4D6F6F79B2}|GameHub\\GameHub.csproj|solutionrelative:gamehub\\repositories\\gamehubrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,56 +14,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameHubsService.cs",
-              "DocumentMoniker": "D:\\Works\\Learn3\\Project\\XO\\backend\\games.server\\GameHub\\Services\\GameHubsService.cs",
-              "RelativeDocumentMoniker": "GameHub\\Services\\GameHubsService.cs",
-              "ToolTip": "D:\\Works\\Learn3\\Project\\XO\\backend\\games.server\\GameHub\\Services\\GameHubsService.cs",
-              "RelativeToolTip": "GameHub\\Services\\GameHubsService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T21:12:19.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameHubRepository.cs",
-              "DocumentMoniker": "D:\\Works\\Learn3\\Project\\XO\\backend\\games.server\\GameHub\\Repositories\\GameHubRepository.cs",
-              "RelativeDocumentMoniker": "GameHub\\Repositories\\GameHubRepository.cs",
-              "ToolTip": "D:\\Works\\Learn3\\Project\\XO\\backend\\games.server\\GameHub\\Repositories\\GameHubRepository.cs",
-              "RelativeToolTip": "GameHub\\Repositories\\GameHubRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T21:12:13.773Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Works\\Learn3\\Project\\XO\\backend\\games.server\\GameHub\\Program.cs",
-              "RelativeDocumentMoniker": "GameHub\\Program.cs",
-              "ToolTip": "D:\\Works\\Learn3\\Project\\XO\\backend\\games.server\\GameHub\\Program.cs",
-              "RelativeToolTip": "GameHub\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T21:12:05.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Works\\Learn3\\Project\\XO\\backend\\games.server\\Game\\Program.cs",
               "RelativeDocumentMoniker": "Game\\Program.cs",
               "ToolTip": "D:\\Works\\Learn3\\Project\\XO\\backend\\games.server\\Game\\Program.cs",
               "RelativeToolTip": "Game\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-15T17:19:14.729Z",
               "EditorCaption": ""
