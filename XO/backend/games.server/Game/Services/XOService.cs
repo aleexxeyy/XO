@@ -13,6 +13,20 @@ namespace Game.Services
             _hubRepository = hubRepository;
         }
 
+        public XO CreateGame(GameHubs hub)
+        {
+            var game = new XO
+            {
+                Id = hub.Id,
+                Board = new string[3, 3],
+                CurrentPlayer = hub.PlayerX,
+                PlayerX = hub.PlayerX,
+                PlayerO = hub.PlayerO,
+            };
+
+            return game;
+        }
+
         public bool CheckWinner(XO game)
         {
             string[,] board = game.Board;
@@ -76,20 +90,6 @@ namespace Game.Services
             gameHub.Status = game.IsGameOver ? "finished" : "in progress";
 
             await _hubRepository.UpdateHub(gameHub);
-        }
-
-        public XO CreateGame(GameHubs hub)
-        {
-            var game = new XO
-            {
-                Id = hub.Id,
-                Board = new string[3,3],
-                CurrentPlayer = hub.PlayerX,
-                PlayerX = hub.PlayerX,
-                PlayerO = hub.PlayerO,
-            };
-
-            return game;
         }
     }
 }
