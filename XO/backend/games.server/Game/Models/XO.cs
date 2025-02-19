@@ -1,14 +1,18 @@
 ﻿using Game.Convertors;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
 namespace Game.Models
 {
     public class XO
     {
+        [Required]
         public Guid Id { get; init; }
         [JsonConverter(typeof(StringArrayJsonConverter))]
         public string[,] Board { get; set; } = new string[3, 3];
+        [Required]
         public string? PlayerX { get; set; }
+        [Required]
         public string? PlayerO { get; set; }
         public string? CurrentPlayer { get; set; }
         public string? Winner { get; set; }

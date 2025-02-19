@@ -1,6 +1,7 @@
 ﻿using Game.Models;
 using GameHub.Models;
 using GameHub.Repositories;
+using GameHub.Services;
 
 namespace Game.Services
 {
@@ -8,7 +9,7 @@ namespace Game.Services
     {
         private readonly IGameHubRepository _hubRepository;
 
-        public XOService(IGameHubRepository hubRepository)
+        public XOService(IGameHubRepository hubRepository, IGameHubsService gameHubService)
         {
             _hubRepository = hubRepository;
         }
