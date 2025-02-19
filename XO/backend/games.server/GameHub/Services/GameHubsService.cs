@@ -31,7 +31,7 @@ namespace GameHub.Services
             return await _gameHubRepository.AddHub(gameHub);
         }
 
-        public async Task<GameHubs?> JoinGame(Guid gameId, string player)
+        public async Task<GameHubs> JoinGame(Guid gameId, string player)
         {
             var game = await _gameHubRepository.GetHub(gameId);
             if (game == null || !string.IsNullOrEmpty(game.PlayerO))
@@ -42,7 +42,9 @@ namespace GameHub.Services
             game.PlayerO = player;
             game.Status = "in progress";
 
-            return await _gameHubRepository.UpdateHub(game);
+            await _gameHubRepository.UpdateHub(game);
+           
+            return game;
         }
     }
 }
