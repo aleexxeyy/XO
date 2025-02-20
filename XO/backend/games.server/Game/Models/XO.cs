@@ -11,10 +11,10 @@ namespace Game.Models
         [JsonConverter(typeof(StringArrayJsonConverter))]
         public string[,] Board { get; set; } = new string[3, 3];
         [Required]
-        public string? PlayerX { get; set; }
+        public string PlayerX { get; set; } = string.Empty;
         [Required]
-        public string? PlayerO { get; set; }
-        public string? CurrentPlayer { get; set; }
+        public string PlayerO { get; set; } = string.Empty;
+        public string CurrentPlayer { get; set; } = string.Empty;
         public string? Winner { get; set; }
         public bool IsGameOver { get; set; } = false;
 

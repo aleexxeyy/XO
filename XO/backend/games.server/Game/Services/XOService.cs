@@ -8,10 +8,12 @@ namespace Game.Services
     public class XOService : IXOService
     {
         private readonly IGameHubRepository _hubRepository;
+        private readonly IGameHubsService _hubService;
 
-        public XOService(IGameHubRepository hubRepository, IGameHubsService gameHubService)
+        public XOService(IGameHubRepository hubRepository, IGameHubsService hubService)
         {
             _hubRepository = hubRepository;
+            _hubService = hubService;
         }
 
         public XO CreateGame(GameHubs hub)
