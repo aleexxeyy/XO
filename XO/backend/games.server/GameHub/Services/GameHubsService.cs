@@ -1,5 +1,7 @@
 ﻿using GameHub.Models;
 using GameHub.Repositories;
+using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace GameHub.Services
 {
@@ -36,7 +38,7 @@ namespace GameHub.Services
             var game = await _gameHubRepository.GetHub(gameId);
             if (game == null || !string.IsNullOrEmpty(game.PlayerO))
             {
-                return null;
+                throw new Exception("Hub not found or second player not connected");
             }
 
             game.PlayerO = player;

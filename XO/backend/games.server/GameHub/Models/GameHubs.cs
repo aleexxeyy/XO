@@ -6,10 +6,10 @@ namespace GameHub.Models
     {
         public Guid Id { get; set; }
         [Required(ErrorMessage = "Creator is required")]
-        public string Creator { get; set; }
-        public string? PlayerX { get; set; } 
-        public string? PlayerO { get; set; }
+        public string Creator { get; set; } = string.Empty;
+        public string PlayerX { get; set; } = string.Empty;
+        public string PlayerO { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; }
-        public string Status { get; set; }
+        public string Status { get; set; } = string.Empty;
     }
 }
