@@ -14,15 +14,17 @@ namespace Game.Services
             _hubRepository = hubRepository;
         }
 
-        public XO CreateGame(GameHubs hub)
+        public async Task<XO> CreateGame(GameHubs hub)
         {
+            var gameHub = await _hubRepository.GetHub(hub.Id);
+            Console.WriteLine($"ID hub - {gameHub.Id}");
             var game = new XO
             {
-                Id = hub.Id,
+                Id = gameHub.Id,
                 Board = new string[3, 3],
-                CurrentPlayer = hub.PlayerX,
-                PlayerX = hub.PlayerX,
-                PlayerO = hub.PlayerO,
+                CurrentPlayer = gameHub.PlayerX,
+                PlayerX = gameHub.PlayerX,
+                PlayerO = gameHub.PlayerO,
             };
 
             return game;

@@ -91,7 +91,7 @@
   {
     "ContainingType": "Game.Controllers.XOController",
     "Method": "CreateGame",
-    "RelativePath": "api/XO/create/{hubId}",
+    "RelativePath": "api/XO/create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
