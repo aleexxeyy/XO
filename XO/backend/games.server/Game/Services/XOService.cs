@@ -14,9 +14,9 @@ namespace Game.Services
             _hubRepository = hubRepository;
         }
 
-        public async Task<XO> CreateGame(GameHubs hub)
+        public async Task<XO> CreateGame(Guid hubId)
         {
-            var gameHub = await _hubRepository.GetHub(hub.Id);
+            var gameHub = await _hubRepository.GetHub(hubId);
             Console.WriteLine($"ID hub - {gameHub.Id}");
             var game = new XO
             {
