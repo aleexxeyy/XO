@@ -22,14 +22,14 @@ namespace Game.Controllers
             _hubRepository = hubRepository;
         }
 
-        [HttpPost("create/{gameId}")]
+        [HttpPost("create")]
         public async Task<IActionResult> CreateGame(Guid hubId)
         {
             var hub = await _hubRepository.GetHub(hubId);
             if (hub == null)
                 return NotFound($"GameHub with ID {hubId} not found.");
 
-            var game = _xoService.CreateGame(hub);
+            var game = _xoService.CreateGame(hubId);
             return Ok(game);
         }
 
@@ -40,7 +40,7 @@ namespace Game.Controllers
             if (hub == null)
                 return NotFound($"GameHub with ID { gameId} not found.");
 
-            var game = await _xoService.CreateGame(hub);
+            var game = await _xoService.CreateGame(gameId);
             game.Board = request.Board;
             game.CurrentPlayer = request.CurrentPlayer;
 
@@ -58,7 +58,7 @@ namespace Game.Controllers
             if (hub == null)
                 return NotFound($"GameHub with ID {gameId} not found.");
 
-            var game = await _xoService.CreateGame(hub);
+            var game = await _xoService.CreateGame(gameId);
             var result = await _xoService.SetWinnerAsync(game, request.WinnerSymbol);
 
             if (!result)

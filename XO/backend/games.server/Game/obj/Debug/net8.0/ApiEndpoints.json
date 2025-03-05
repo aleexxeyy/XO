@@ -99,7 +99,7 @@
       {
         "Name": "hubId",
         "Type": "System.Guid",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

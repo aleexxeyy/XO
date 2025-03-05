@@ -94,28 +94,16 @@
         "tags": [
           "XO"
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "string",
-                "format": "uuid"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "type": "string",
-                "format": "uuid"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "type": "string",
-                "format": "uuid"
-              }
+        "parameters": [
+          {
+            "name": "hubId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "OK"
