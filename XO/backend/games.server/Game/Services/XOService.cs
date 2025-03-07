@@ -2,6 +2,9 @@
 using GameHub.Models;
 using GameHub.Repositories;
 using GameHub.Services;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Game.Services
 {
@@ -9,7 +12,7 @@ namespace Game.Services
     {
         private readonly IGameHubRepository _hubRepository;
 
-        public XOService(IGameHubRepository hubRepository, IGameHubsService hubService)
+        public XOService(IGameHubRepository hubRepository)
         {
             _hubRepository = hubRepository;
         }
@@ -17,10 +20,16 @@ namespace Game.Services
         public async Task<XO> CreateGame(Guid hubId)
         {
             var gameHub = await _hubRepository.GetHub(hubId);
+
             var game = new XO
             {
                 Id = gameHub.Id,
-                Board = new string[3, 3],
+                Board = new List<List<string>>
+                {
+                    new() { "", "", "" },
+                    new() { "", "", "" },
+                    new() { "", "", "" }
+                },
                 CurrentPlayer = gameHub.PlayerX,
                 PlayerX = gameHub.PlayerX,
                 PlayerO = gameHub.PlayerO,
@@ -31,20 +40,20 @@ namespace Game.Services
 
         public bool CheckWinner(XO game)
         {
-            string[,] board = game.Board;
-            int size = board.GetLength(0);
+            List<List<string>> board = game.Board;
+            int size = board.Count;
 
             for (int i = 0; i < size; i++)
             {
-                if (!string.IsNullOrEmpty(board[i, 0]) && Enumerable.Range(1, size - 1).All(j => board[i, j] == board[i, 0]))
+                if (!string.IsNullOrEmpty(board[i][0]) && board[i].All(cell => cell == board[i][0]))
                     return true;
-                if (!string.IsNullOrEmpty(board[0, i]) && Enumerable.Range(1, size - 1).All(j => board[j, i] == board[0, i]))
+                if (!string.IsNullOrEmpty(board[0][i]) && Enumerable.Range(1, size - 1).All(j => board[j][i] == board[0][i]))
                     return true;
             }
 
-            if (!string.IsNullOrEmpty(board[0, 0]) && Enumerable.Range(1, size - 1).All(i => board[i, i] == board[0, 0]))
+            if (!string.IsNullOrEmpty(board[0][0]) && Enumerable.Range(1, size - 1).All(i => board[i][i] == board[0][0]))
                 return true;
-            if (!string.IsNullOrEmpty(board[0, size - 1]) && Enumerable.Range(1, size - 1).All(i => board[i, size - 1 - i] == board[0, size - 1]))
+            if (!string.IsNullOrEmpty(board[0][size - 1]) && Enumerable.Range(1, size - 1).All(i => board[i][size - 1 - i] == board[0][size - 1]))
                 return true;
 
             return false;
@@ -52,13 +61,15 @@ namespace Game.Services
 
         public async Task<XO?> MakeMoveAsync(XO game, int row, int col)
         {
-            if (game == null || game.Board[row, col] != null)
+            if (game == null || row < 0 || row >= game.Board.Count || col < 0 || col >= game.Board[row].Count || !string.IsNullOrEmpty(game.Board[row][col]))
                 return null;
 
-            game.Board[row, col] = game.CurrentPlayer;
+            game.Board[row][col] = game.CurrentPlayer;
+
             if (CheckWinner(game))
             {
                 game.Winner = game.CurrentPlayer == "X" ? game.PlayerX : game.PlayerO;
+                game.IsGameOver = true;
             }
             else
             {
@@ -66,8 +77,10 @@ namespace Game.Services
             }
 
             await UpdateGameAsync(game);
+
             return game;
         }
+
 
         public async Task<bool> SetWinnerAsync(XO game, string winnerSymbol)
         {
@@ -75,6 +88,7 @@ namespace Game.Services
                 return false;
 
             game.Winner = winnerSymbol == "X" ? game.PlayerX : game.PlayerO;
+            game.IsGameOver = true;
             await UpdateGameAsync(game);
             return true;
         }

@@ -9,7 +9,7 @@ namespace Game.Models
         [Required]
         public Guid Id { get; init; }
         [JsonConverter(typeof(StringArrayJsonConverter))]
-        public string[,] Board { get; set; } = new string[3, 3];
+        public List<List<string>> Board { get; set; } = new();
         [Required]
         public string PlayerX { get; set; } = string.Empty;
         [Required]
@@ -17,6 +17,5 @@ namespace Game.Models
         public string CurrentPlayer { get; set; } = string.Empty;
         public string? Winner { get; set; }
         public bool IsGameOver { get; set; } = false;
-
     }
 }
