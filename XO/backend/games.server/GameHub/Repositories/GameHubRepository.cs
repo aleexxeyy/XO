@@ -38,6 +38,7 @@ namespace GameHub.Repositories
 
         public async Task<GameHubs> UpdateHub(GameHubs gameHub)
         {
+            _dbContext.Games.AsNoTracking();
             _dbContext.Games.Update(gameHub);
             await _dbContext.SaveChangesAsync();
             return gameHub;
