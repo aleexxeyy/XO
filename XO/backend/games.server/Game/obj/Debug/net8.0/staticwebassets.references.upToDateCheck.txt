@@ -25,3 +25,4 @@ D:\Works\Learn3\Project\XO\backend\games.server\GameHub\obj\Debug\net8.0\staticw
 D:\Works\Learn3\Project\XO\backend\games.server\GameHub\obj\Debug\net8.0\staticwebassets.build.json
 D:\Works\Learn3\Project\XO\backend\games.server\GameHub\obj\Debug\net8.0\staticwebassets.build.json
 D:\Works\Learn3\Project\XO\backend\games.server\GameHub\obj\Debug\net8.0\staticwebassets.build.json
+D:\Works\Learn3\Project\XO\backend\games.server\GameHub\obj\Debug\net8.0\staticwebassets.build.json

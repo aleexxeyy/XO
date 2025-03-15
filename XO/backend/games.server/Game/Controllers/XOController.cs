@@ -1,12 +1,7 @@
 ﻿using Game.Dto;
-using Game.Models;
 using Game.Services;
-using GameHub.Models;
 using GameHub.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Game.Controllers
 {

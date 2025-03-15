@@ -215,12 +215,7 @@
           },
           "board": {
             "type": "array",
-            "items": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
+            "items": { },
             "nullable": true
           }
         },
