@@ -9,7 +9,7 @@ namespace Game.Models
         [Required]
         public Guid Id { get; init; }
         [JsonConverter(typeof(StringArrayJsonConverter))]
-        public List<List<string>> Board { get; set; } = new();
+        public string[,] Board { get; set; } = new string[3, 3];
         [Required]
         public string PlayerX { get; set; } = string.Empty;
         [Required]

@@ -1,10 +1,5 @@
 ﻿using Game.Models;
-using GameHub.Models;
 using GameHub.Repositories;
-using GameHub.Services;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Game.Services
 {
@@ -24,12 +19,7 @@ namespace Game.Services
             var game = new XO
             {
                 Id = gameHub.Id,
-                Board = new List<List<string>>
-                {
-                    new() { "", "", "" },
-                    new() { "", "", "" },
-                    new() { "", "", "" }
-                },
+                Board = new string[3,3],
                 CurrentPlayer = gameHub.PlayerX,
                 PlayerX = gameHub.PlayerX,
                 PlayerO = gameHub.PlayerO,
@@ -40,45 +30,12 @@ namespace Game.Services
 
         public bool CheckWinner(XO game)
         {
-            List<List<string>> board = game.Board;
-            int size = board.Count;
-
-            for (int i = 0; i < size; i++)
-            {
-                if (!string.IsNullOrEmpty(board[i][0]) && board[i].All(cell => cell == board[i][0]))
-                    return true;
-                if (!string.IsNullOrEmpty(board[0][i]) && Enumerable.Range(1, size - 1).All(j => board[j][i] == board[0][i]))
-                    return true;
-            }
-
-            if (!string.IsNullOrEmpty(board[0][0]) && Enumerable.Range(1, size - 1).All(i => board[i][i] == board[0][0]))
-                return true;
-            if (!string.IsNullOrEmpty(board[0][size - 1]) && Enumerable.Range(1, size - 1).All(i => board[i][size - 1 - i] == board[0][size - 1]))
-                return true;
-
-            return false;
+            throw new NotImplementedException();
         }
 
         public async Task<XO?> MakeMoveAsync(XO game, int row, int col)
         {
-            if (game == null || row < 0 || row >= game.Board.Count || col < 0 || col >= game.Board[row].Count || !string.IsNullOrEmpty(game.Board[row][col]))
-                return null;
-
-            game.Board[row][col] = game.CurrentPlayer;
-
-            if (CheckWinner(game))
-            {
-                game.Winner = game.CurrentPlayer == "X" ? game.PlayerX : game.PlayerO;
-                game.IsGameOver = true;
-            }
-            else
-            {
-                game.CurrentPlayer = game.CurrentPlayer == "X" ? "O" : "X";
-            }
-
-            await UpdateGameAsync(game);
-
-            return game;
+            throw new NotImplementedException();
         }
 
 
