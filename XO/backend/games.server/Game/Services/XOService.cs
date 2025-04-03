@@ -1,4 +1,6 @@
 ﻿using Game.Models;
+using GameHub.Hubs;
+using GameHub.Models;
 using GameHub.Repositories;
 
 namespace Game.Services
@@ -16,6 +18,9 @@ namespace Game.Services
         {
             var gameHub = await _hubRepository.GetHub(hubId);
 
+            if (gameHub?.Id == null)
+                throw new ArgumentNullException(nameof(hubId), "Hub id is null");
+            
             var game = new XO
             {
                 Id = gameHub.Id,
@@ -33,6 +38,7 @@ namespace Game.Services
             throw new NotImplementedException();
         }
 
+        
         public async Task<XO?> MakeMoveAsync(XO game, int row, int col)
         {
             throw new NotImplementedException();
@@ -61,6 +67,7 @@ namespace Game.Services
             game.PlayerX = gameHub.PlayerX;
             game.PlayerO = gameHub.PlayerO;
             gameHub.Status = game.IsGameOver ? "finished" : "in progress";
+            gameHub.Id = game.Id;
 
             await _hubRepository.UpdateHub(gameHub);
         }
