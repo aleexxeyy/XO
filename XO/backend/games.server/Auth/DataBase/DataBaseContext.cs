@@ -13,7 +13,7 @@ namespace Auth.DataBase
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlite("Data Source=AuthDb.sqlite");
+                optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=AuthDb;Username=postgres;Password=donbass24iy26");
             }
         }
     }
