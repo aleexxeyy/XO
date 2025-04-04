@@ -166,4 +166,6 @@ D:\Works\Learn3\Project\XO\backend\games.server\Game\obj\Debug\net8.0\refint\Gam
 D:\Works\Learn3\Project\XO\backend\games.server\Game\obj\Debug\net8.0\Game.pdb
 D:\Works\Learn3\Project\XO\backend\games.server\Game\obj\Debug\net8.0\Game.genruntimeconfig.cache
 D:\Works\Learn3\Project\XO\backend\games.server\Game\obj\Debug\net8.0\ref\Game.dll
+D:\Works\Learn3\Project\XO\backend\games.server\Game\bin\Debug\net8.0\Npgsql.dll
+D:\Works\Learn3\Project\XO\backend\games.server\Game\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 D:\Works\Learn3\Project\XO\backend\games.server\Game\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

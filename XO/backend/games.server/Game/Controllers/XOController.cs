@@ -33,8 +33,7 @@ namespace Game.Controllers
         public async Task<IActionResult> MakeMove(Guid gameId, [FromBody] MoveRequest request)
         {
             var hub = await _hubRepository.GetHub(gameId);
-            if (hub == null)
-                return NotFound($"GameHub with ID {gameId} not found.");
+            return NotFound($"GameHub with ID {gameId} not found.");
 
             var game = await _xoService.CreateGame(gameId);
             game.Board = request.Board;

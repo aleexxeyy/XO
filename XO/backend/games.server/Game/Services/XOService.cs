@@ -44,7 +44,6 @@ namespace Game.Services
             throw new NotImplementedException();
         }
 
-
         public async Task<bool> SetWinnerAsync(XO game, string winnerSymbol)
         {
             if (game == null || string.IsNullOrEmpty(winnerSymbol))
