@@ -7,7 +7,7 @@ using GameHub.Repositories;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<GameHubDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IGameHubRepository, GameHubRepository>();
 builder.Services.AddScoped<IGameHubsService, GameHubsService>();
