@@ -14,7 +14,7 @@ namespace GameHub.Services
             _gameHubRepository = gameHubRepository;
         }
 
-        public async Task<List<GameHubs>> GetGames()
+        public async Task<List<GameHubs>> GetListGames()
         {
             return await _gameHubRepository.GetListHubs();
         }
