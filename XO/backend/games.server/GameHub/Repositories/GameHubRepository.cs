@@ -32,7 +32,7 @@ namespace GameHub.Repositories
         {
             return await _dbContext.GameHubs
                 .AsNoTracking()
-                .Where(g => g.Status == "second player expected")
+                .Where(g => g.Status == "second player expected" && g.Status == "in progress")
                 .ToListAsync();
         }
 
