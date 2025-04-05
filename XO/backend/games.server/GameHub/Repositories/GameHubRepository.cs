@@ -23,14 +23,14 @@ namespace GameHub.Repositories
 
         public async Task<GameHubs?> GetHub(Guid id)
         {
-            return await _dbContext.Games
+            return await _dbContext.GameHubs
                 .AsNoTracking() 
                 .FirstOrDefaultAsync(h => h.Id == id && h.Status == "second player expected");
         }
 
         public async Task<List<GameHubs>> GetListHubs()
         {
-            return await _dbContext.Games
+            return await _dbContext.GameHubs
                 .AsNoTracking()
                 .Where(g => g.Status == "second player expected")
                 .ToListAsync();
@@ -38,7 +38,7 @@ namespace GameHub.Repositories
 
         public async Task<GameHubs> UpdateHub(GameHubs gameHub)
         {
-            _dbContext.Games.Update(gameHub);
+            _dbContext.GameHubs.Update(gameHub);
             await _dbContext.SaveChangesAsync();
             return gameHub;
         }

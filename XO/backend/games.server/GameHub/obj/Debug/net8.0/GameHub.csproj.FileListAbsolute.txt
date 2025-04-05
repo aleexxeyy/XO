@@ -323,3 +323,4 @@ D:\Works\Learn3\Project\XO\backend\games.server\GameHub\obj\Debug\net8.0\GameHub
 D:\Works\Learn3\Project\XO\backend\games.server\GameHub\obj\Debug\net8.0\ref\GameHub.dll
 D:\Works\Learn3\Project\XO\backend\games.server\GameHub\bin\Debug\net8.0\Npgsql.dll
 D:\Works\Learn3\Project\XO\backend\games.server\GameHub\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\Works\Learn3\Project\XO\backend\games.server\GameHub\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
