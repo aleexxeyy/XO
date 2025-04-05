@@ -25,7 +25,7 @@ namespace Game.Controllers
             if (hub == null)
                 return NotFound($"GameHub with ID {hubId} not found.");
 
-            var game = _xoService.CreateGame(hubId);
+            var game = await _xoService.CreateGame(hubId);
             return Ok(game);
         }
 
