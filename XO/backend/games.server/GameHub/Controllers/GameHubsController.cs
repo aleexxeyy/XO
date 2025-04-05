@@ -41,7 +41,7 @@ namespace GameHub.Controllers
         [HttpGet("get-games")]
         public async Task<IActionResult> GetGames()
         {
-            var games = await _gameService.GetGames();
+            var games = await _gameService.GetListGames();
             return Ok(games);
         }
     }
