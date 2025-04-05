@@ -103,21 +103,5 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Game.Controllers.XOController",
-    "Method": "GetHub",
-    "RelativePath": "api/XO/get-hub",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
   }
 ]
