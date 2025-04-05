@@ -49,7 +49,7 @@ namespace GameHub.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Games");
+                    b.ToTable("GameHubs");
                 });
 #pragma warning restore 612, 618
         }

@@ -22,7 +22,7 @@ namespace GameHub.Controllers
         [HttpPost("create")]
         public async Task<IActionResult> CreateGame([FromBody] string creator)
         {
-            var game = _gameService.CreateHub(creator);
+            var game = await _gameService.CreateHub(creator);
             await _hubContext.Clients.All.SendAsync("GameCreated", game);
 
             return Ok(game);
@@ -31,7 +31,7 @@ namespace GameHub.Controllers
         [HttpPost("join")]
         public async Task<IActionResult> JoinGame([FromQuery] Guid gameId, [FromBody] string player)
         {
-            var game = _gameService.JoinGame(gameId, player);
+            var game = await _gameService.JoinGame(gameId, player);
             if (game == null) return NotFound("Game not found or already taken");
 
             await _hubContext.Clients.All.SendAsync("GameUpdated", game);

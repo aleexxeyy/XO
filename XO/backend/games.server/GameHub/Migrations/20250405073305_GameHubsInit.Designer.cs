@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace GameHub.Migrations
 {
     [DbContext(typeof(GameHubDbContext))]
-    [Migration("20250404230558_GameHubDbInit")]
-    partial class GameHubDbInit
+    [Migration("20250405073305_GameHubsInit")]
+    partial class GameHubsInit
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,7 +52,7 @@ namespace GameHub.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Games");
+                    b.ToTable("GameHubs");
                 });
 #pragma warning restore 612, 618
         }
