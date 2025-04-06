@@ -35,12 +35,14 @@ namespace Game.Services
 
         public bool CheckWinner(XO game)
         {
+            //TODOO - realize thus method
             throw new NotImplementedException();
         }
 
         
         public async Task<XO?> MakeMoveAsync(XO game, int row, int col)
         {
+            //TODOO - realize thus method
             throw new NotImplementedException();
         }
 
